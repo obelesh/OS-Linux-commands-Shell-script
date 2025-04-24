@@ -377,29 +377,23 @@ mkdir backupdir
 mv backup.tar backupdir
  
 tar -tvf backup.tar
-## OUTPUT
 
 
 tar -xvf backup.tar
-## OUTPUT
 
 gzip backup.tar
 
 ls .gz
-## OUTPUT
- 
-gunzip backup.tar.gz
-## OUTPUT
 
- 
-# Shell Script
-```
+gunzip backup.tar.gz
+
+
 echo '#!/bin/sh' > my-script.sh
+
 echo 'echo Hello World‘; exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
-## OUTPUT
 
  
 cat << stop > herecheck.txt
@@ -1014,9 +1008,13 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
-## OUTPUT
+
 $ ./argshift.sh 1 2 3
  
+## OUTPUT
+
+![OUTPUT](./img/img68.png)
+
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1027,10 +1025,13 @@ while (( "$#" )); do
 done
 set +x
 ```
-## OUTPUT
+
  ./argshift.sh 1 2 3
  
- 
+ ## OUTPUT
+
+ ![OUTPUT](./img/img69.png)
+
 cat > nc.awk
 ```bash
 BEGIN{}
@@ -1060,7 +1061,7 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ ![OUTPUT](./img/img70.png)
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1087,7 +1088,7 @@ else
 fi
 ```
 ## OUTPUT 
-
+![OUTPUT](img/img71.png)
 
 # RESULT:
 The Commands are executed successfully.
